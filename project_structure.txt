@@ -1,0 +1,60 @@
+django-cms-project/              # Project root
+├── .env                         # Environment variables
+├── .gitignore
+├── requirements.txt
+├── manage.py
+├── core/                # Django project
+│   ├── __init__.py
+│   ├── urls.py                # Main URL routing
+│   ├── asgi.py
+│   ├── wsgi.py
+│   └── settings/              # Settings module
+│       ├── __init__.py
+│       ├── base.py           # Base settings (common)
+│       ├── development.py    # Dev settings
+│       ├── staging.py        # Staging settings
+│       └── production.py     # Prod settings
+├── apps/                       # All Django apps go here
+│   └── cms/                   # Main CMS app
+│       ├── __init__.py
+│       ├── admin.py
+│       ├── apps.py
+│       ├── models.py
+│       ├── views.py
+│       ├── urls.py
+│       ├── forms.py
+│       ├── services.py       # Business logic layer
+│       ├── selectors.py      # Query logic layer
+│       ├── permissions.py    # Custom permissions
+│       ├── signals.py        # Django signals
+│       ├── managers.py       # Custom model managers
+│       ├── exceptions.py     # Custom exceptions
+│       ├── constants.py      # App constants
+│       ├── utils.py          # Utility functions
+│       └── tests/
+│           ├── __init__.py
+│           ├── test_models.py
+│           └── test_views.py
+├── templates/                  # Global templates
+│   ├── base.html
+│   ├── includes/              # Reusable components
+│   │   ├── header.html
+│   │   ├── footer.html
+│   │   └── navigation.html
+│   └── admin/                 # Custom admin templates
+│       └── base_site.html
+├── static/                    # Static assets
+│   ├── css/
+│   ├── js/
+│   ├── images/
+│   └── vendors/              # Third-party libraries
+├── media/                     # User uploaded files
+├── utils/                     # Project-wide utilities
+│   ├── __init__.py
+│   ├── validators.py
+│   └── helpers.py
+├── config/                    # Non-Django configurations
+│   ├── nginx/
+│   └── docker/
+├── docs/                      # Documentation
+└── scripts/                   # Deployment/management scripts
