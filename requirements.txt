@@ -1,0 +1,2 @@
+echo Django==4.2.7
+mysqlclient==2.2.0 > requirements.txt
